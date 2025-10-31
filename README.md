@@ -1,3 +1,4 @@
 # Smart-Data-Logger
-A beginner-level Python project that logs and manages simple data entries.
 
+Smart Data Logger is a beginner-friendly Python project that simulates a simple environmental data collection system.  
+It allows users to log
