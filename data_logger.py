@@ -19,14 +19,14 @@ def log_entry():
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(DATA_FILE, "a") as file:
         file.write(f"{timestamp} - {entry}\n")
-    print("✅ Entry added successfully!\n")
+    print("Entry added successfully!\n")
 
 def view_logs():
     """View all logged entries."""
     if not os.path.exists(DATA_FILE):
-        print("⚠️ No data log found yet.\n")
+        print("No data log found yet.\n")
         return
-    print("\n📘 Logged Entries:")
+    print("\n Logged Entries:")
     with open(DATA_FILE, "r") as file:
         print(file.read())
 
@@ -34,9 +34,9 @@ def search_logs():
     """Search for specific keywords in logs."""
     keyword = input("Enter a keyword to search: ").lower()
     if not os.path.exists(DATA_FILE):
-        print("⚠️ No data log found yet.\n")
+        print("No data log found yet.\n")
         return
-    print(f"\n🔍 Search results for '{keyword}':")
+    print(f"\n Search results for '{keyword}':")
     with open(DATA_FILE, "r") as file:
         found = False
         for line in file:
@@ -63,10 +63,10 @@ def main():
         elif choice == "3":
             search_logs()
         elif choice == "4":
-            print("👋 Exiting Smart Data Logger. Goodbye!")
+            print("Exiting Smart Data Logger. Goodbye!")
             break
         else:
-            print("❌ Invalid choice. Please try again.\n")
+            print("Invalid choice. Please try again.\n")
 
 if __name__ == "__main__":
     main()
